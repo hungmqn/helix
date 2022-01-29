@@ -1,30 +1,17 @@
 import { ReactElement } from 'react';
-import styled from 'styled-components';
 
 import { useCurrentPath } from '../../../shared/hooks/useCurrentPath';
 import MenuItem from './MenuItem';
-
-const StyledSidebar = styled.div`
-  border-radius: ${({ theme }) => theme.sizes.medium}px;
-  padding: ${({ theme }) => theme.space.xlarge}px;
-
-  transition: ${({ theme }) => theme.transitions.boxShadowCubic};
-  box-shadow: ${({ theme }) => theme.shadows.card};
-
-  &:hover {
-    box-shadow: ${({ theme }) => theme.shadows.soft};
-  }
-`;
+import Card from '../../../shared/Card';
 
 const Sidebar = (): ReactElement => {
   const currentPath = useCurrentPath();
 
   const handleNavigate = (path: string) => {
-    console.log(path);
     window.location.assign(path);
   };
   return (
-    <StyledSidebar>
+    <Card>
       <MenuItem
         icon="home"
         text="KC Home"
@@ -49,7 +36,7 @@ const Sidebar = (): ReactElement => {
         active={currentPath === '/mail'}
         onClick={() => handleNavigate('/mail')}
       />
-    </StyledSidebar>
+    </Card>
   );
 };
 
