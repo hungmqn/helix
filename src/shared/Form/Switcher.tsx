@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import styled from 'styled-components';
 
 const StyledInput = styled.div`
@@ -46,43 +46,31 @@ const StyledInput = styled.div`
 `;
 
 interface InputProps {
-  register: any;
   name: string;
   label: string;
   type?: string;
   validate?: any;
-  defaultValue?: any;
   errors?: any;
 }
 
-const Input = ({
-  register,
-  name,
-  type = 'text',
-  label,
-  validate = {},
-  defaultValue,
-  errors,
-}: InputProps) => {
-  return (
-    <StyledInput>
-      <div className="helix-form-label">{label}</div>
-      <div className="helix-form-input">
-        <input
-          type={type}
-          defaultValue={defaultValue}
-          {...register(name, validate)}
-        />
-        {errors
-          ? errors[name] && (
-              <span className="helix-form-error-inline">
-                {errors[name].message}
-              </span>
-            )
-          : ''}
-      </div>
-    </StyledInput>
-  );
-};
+const Switcher = forwardRef(
+  ({ name, label, errors, ...fieldProps }: InputProps, fowardedRef) => {
+    return (
+      <StyledInput>
+        <div className="helix-form-label">{label}</div>
+        <div className="helix-form-input">
+          <input {...fieldProps} />
+          {errors
+            ? errors[name] && (
+                <span className="helix-form-error-inline">
+                  {errors[name].message}
+                </span>
+              )
+            : ''}
+        </div>
+      </StyledInput>
+    );
+  }
+);
 
-export default Input;
+export default Switcher;

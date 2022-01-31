@@ -1,8 +1,14 @@
-import React, { useMemo } from 'react';
-import { useForm, SubmitHandler, useFormState } from 'react-hook-form';
+import { useMemo } from 'react';
+import {
+  useForm,
+  SubmitHandler,
+  useFormState,
+  Controller,
+} from 'react-hook-form';
 
 import Card from '../../../shared/Card';
 import Input from '../../../shared/Form/Input';
+import Switcher from '../../../shared/Form/Switcher';
 
 type Inputs = {
   futureValue: Number;
@@ -37,12 +43,14 @@ const Form = () => {
   } = useForm<Inputs>({ mode: 'onChange' });
   const { isValid } = useFormState({ control });
 
-  const [rate, numberOfPeriods, paymentAmount, presentValue] = watch([
-    'rate',
-    'numberOfPeriods',
-    'paymentAmount',
-    'presentValue',
-  ]);
+  const [rate, numberOfPeriods, paymentAmount, presentValue, endOrBeginning] =
+    watch([
+      'rate',
+      'numberOfPeriods',
+      'paymentAmount',
+      'presentValue',
+      'endOrBeginning',
+    ]);
 
   const calculate = () => {
     if (isValid) {
@@ -61,7 +69,7 @@ const Form = () => {
           1 + ((paymentAmount as any) * (rate as any)) / 100,
           numberOfPeriods as any
         );
-      console.log(futureValue);
+      console.log({ formValues, futureValue });
     }
   };
 
@@ -120,15 +128,21 @@ const Form = () => {
           type="number"
           label="Present Value (PV) / Số tiền đã đầu tư:"
         />
-        {/* <Input
-          defaultValue={0}
-          register={register}
+        <Controller
           name="endOrBeginning"
-          type="number"
-          label="End or Beginning / Trả tiền đầu hay cuối kỳ:"
-        /> */}
+          control={control}
+          defaultValue={0.0}
+          render={({ field }) => (
+            <Switcher
+              {...field}
+              type="number"
+              label="End or Beginning / Trả tiền đầu hay cuối kỳ:"
+            />
+          )}
+        />
         <br />
-        Future value / Kết quả: {futureValue}
+        Future value / Kết quả: {futureValue} -
+        {!!endOrBeginning ? 'Trả cuối kỳ' : 'Trả đầu kỳ'}
         <br />
         <br />
         <div>
