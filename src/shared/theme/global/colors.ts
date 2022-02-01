@@ -12,6 +12,8 @@ const colors = {
   background: 'rgba(255, 255, 255, 0.08)',
   tableHeader: 'rgba(255, 255, 255, 0.04)',
   //
+  linkText: 'rgba(2,88,255,0.85)',
+  linkTextHover: 'rgba(2,88,255,1)',
   dangerText: 'rgba(255,2,2,1)',
   // background
   backgroundSoftRGBA: 'rgba(52, 52, 52, 1)',

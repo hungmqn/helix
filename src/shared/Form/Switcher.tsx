@@ -53,13 +53,13 @@ interface InputProps {
   errors?: any;
 }
 
-const Switcher = forwardRef(
+const Switcher = forwardRef<HTMLInputElement, InputProps>(
   ({ name, label, errors, ...fieldProps }: InputProps, fowardedRef) => {
     return (
       <StyledInput>
         <div className="helix-form-label">{label}</div>
         <div className="helix-form-input">
-          <input {...fieldProps} />
+          <input {...fieldProps} ref={fowardedRef} />
           {errors
             ? errors[name] && (
                 <span className="helix-form-error-inline">
