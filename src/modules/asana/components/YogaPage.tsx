@@ -5,16 +5,16 @@ import Card from '../../../shared/Card';
 import Typography from '../../../shared/Typography';
 import { PAGES } from './constants';
 
-const AsanaPage = () => {
+const YogaPage = () => {
   const theme = useTheme();
 
   return (
     <Card style={{ padding: theme.space.xxlarge, minWidth: '70%' }}>
-      <Element name={PAGES.ASANA}>
+      <Element name={PAGES.YOGA}>
         <Typography.Title
           style={{ textAlign: 'center', textTransform: 'uppercase' }}
         >
-          {PAGES.ASANA}
+          {PAGES.YOGA}
         </Typography.Title>
       </Element>
       <Typography.Text tagName="div">
@@ -45,4 +45,4 @@ const AsanaPage = () => {
   );
 };
 
-export default AsanaPage;
+export default YogaPage;
