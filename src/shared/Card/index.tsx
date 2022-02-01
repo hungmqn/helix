@@ -1,8 +1,9 @@
 import { ReactElement, ReactNode } from 'react';
-import styled from 'styled-components';
+import styled, { CSSProperties } from 'styled-components';
 
 interface CardProps {
   children: ReactNode;
+  style?: CSSProperties;
 }
 
 const StyledCard = styled.div`
@@ -17,8 +18,8 @@ const StyledCard = styled.div`
   }
 `;
 
-const Card = ({ children }: CardProps): ReactElement => {
-  return <StyledCard>{children}</StyledCard>;
+const Card = ({ children, style }: CardProps): ReactElement => {
+  return <StyledCard style={style}>{children}</StyledCard>;
 };
 
 export default Card;
