@@ -140,7 +140,8 @@ const StyledDivBlock = styled.div<StyledProps>`
     ${nestedInlineStyle};
   }
 
-  > ul {
+  > ul,
+  > ol {
     margin: 0;
     padding: 0;
     padding-inline-start: ${({ theme }) => theme.space.xlarge}px;
