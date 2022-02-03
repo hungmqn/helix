@@ -1,8 +1,9 @@
 import { useTheme } from 'styled-components';
-import { Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 import Typography from '../../../shared/Typography';
 import { PAGES, CONTENT_LIST } from './constants';
+import Icon from '../../../shared/Icon';
 
 const Kaoshikii = () => {
   const theme = useTheme();
@@ -141,6 +142,15 @@ const Kaoshikii = () => {
           Tata: Con đọc lời sám hối trong nhịp điệu hoà lẫn với nhịp điệu của
           Ngài.
         </Typography.Text>
+      </div>
+      <div
+        onClick={() =>
+          scroller.scrollTo(PAGES.TABLE_OF_CONTENT, {
+            smooth: true,
+          })
+        }
+      >
+        <Icon icon="arrow-up" style={{ cursor: 'pointer' }} />
       </div>
     </div>
   );

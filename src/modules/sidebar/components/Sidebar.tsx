@@ -19,12 +19,6 @@ const Sidebar = (): ReactElement => {
         onClick={() => handleNavigate('/')}
       />
       <MenuItem
-        icon="folder"
-        text="KC Folder"
-        active={currentPath === '/folder'}
-        onClick={() => handleNavigate('/folder')}
-      />
-      <MenuItem
         icon="quill"
         text="KC Writing"
         active={currentPath === '/writing'}
