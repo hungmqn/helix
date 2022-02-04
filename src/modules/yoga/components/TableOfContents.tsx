@@ -1,5 +1,5 @@
 import { Element, scroller } from 'react-scroll';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import Typography from '../../../shared/Typography';
 
@@ -36,12 +36,15 @@ const Topic = ({ to, title }: TopicProps) => (
 );
 
 const TableOfContents = () => {
+  const theme = useTheme();
+
   return (
     <Element name={PAGES.TABLE_OF_CONTENT}>
       <ul
         style={{
           listStyleType: 'none',
           paddingInlineStart: 0,
+          marginBottom: theme.space.xxlarge,
         }}
       >
         {Object.keys(CONTENT_LIST).map((content) => (

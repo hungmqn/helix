@@ -41,7 +41,7 @@ export const ROUTES: RoutesType = [
     icon: 'quill',
     path: '/blog',
     component: BlogPage,
-    showInNavigator: true,
+    showInNavigator: false,
   },
   {
     name: 'yoga',

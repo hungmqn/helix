@@ -9,11 +9,11 @@ const SampleComponent = () => {
   return (
     <Card
       style={{
+        boxSizing: 'border-box',
         padding: theme.space.xxlarge,
-        minWidth: '70%',
-        maxWidth: '90%',
         marginTop: theme.space.xxlarge,
         marginBottom: theme.space.xxlarge,
+        width: '100%',
       }}
     >
       <Typography.Title

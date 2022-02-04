@@ -122,7 +122,7 @@ const nestedInlineStyle = css`
     transition: ${({ theme }) => theme.transitions.colorCubic};
     &:hover,
     &:focus {
-      color: ${({ theme }) => theme.colors.linkText};
+      color: ${({ theme }) => theme.colors.linkTextHover};
     }
   }
 `;

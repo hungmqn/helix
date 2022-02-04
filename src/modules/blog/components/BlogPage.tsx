@@ -9,18 +9,18 @@ const BlogPage = () => {
   return (
     <Card
       style={{
+        boxSizing: 'border-box',
         padding: theme.space.xxlarge,
-        minWidth: '70%',
-        maxWidth: '90%',
         marginTop: theme.space.xxlarge,
         marginBottom: theme.space.xxlarge,
+        width: '100%',
       }}
     >
       <Typography.Title
         style={{
           textAlign: 'center',
           textTransform: 'uppercase',
-          marginBottom: theme.space.large,
+          marginBottom: theme.space.xxlarge,
         }}
         fontWeight="bold"
       >
@@ -32,9 +32,13 @@ const BlogPage = () => {
             borderRadius: theme.sizes.small,
           }}
         >
-          Blog Page
+          Blog
         </span>
       </Typography.Title>
+
+      <Typography.Text>
+        I write when I am interested in something.
+      </Typography.Text>
     </Card>
   );
 };

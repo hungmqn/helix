@@ -1,6 +1,7 @@
 import { useTheme } from 'styled-components';
 
 import Card from '../../../shared/Card';
+import Icon from '../../../shared/Icon';
 import Typography from '../../../shared/Typography';
 
 const HomePage = () => {
@@ -9,18 +10,17 @@ const HomePage = () => {
   return (
     <Card
       style={{
+        boxSizing: 'border-box',
         padding: theme.space.xxlarge,
-        minWidth: '70%',
-        maxWidth: '90%',
         marginTop: theme.space.xxlarge,
         marginBottom: theme.space.xxlarge,
+        width: '100%',
       }}
     >
       <Typography.Title
         style={{
           textAlign: 'center',
-          textTransform: 'uppercase',
-          marginBottom: theme.space.large,
+          marginBottom: theme.space.xxlarge,
         }}
         fontWeight="bold"
       >
@@ -35,6 +35,15 @@ const HomePage = () => {
           Home Page
         </span>
       </Typography.Title>
+
+      <Typography.Text style={{ textAlign: 'center' }}>
+        <strong> Hello there, welcome to my website!</strong>
+        <br />I am Hung, a software engineer. There is some useful myth here,
+        hope you find it!
+      </Typography.Text>
+      <Typography.Text tagName="div" style={{ textAlign: 'center' }}>
+        <Icon icon="heart" />
+      </Typography.Text>
     </Card>
   );
 };
