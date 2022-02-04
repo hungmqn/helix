@@ -30,7 +30,7 @@ const YogaPoseItem = styled.div`
   }
 `;
 
-const Asana = () => {
+const AsanaPose = () => {
   const theme = useTheme();
 
   return (
@@ -91,3 +91,5 @@ const Asana = () => {
     </div>
   );
 };
+
+export default AsanaPose;

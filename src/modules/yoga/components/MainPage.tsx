@@ -9,7 +9,7 @@ import TableOfContents from './TableOfContents';
 import Massage from './Massage';
 import Fasting from './Fasting';
 
-const AsanaMainPage = () => {
+const MainPage = () => {
   const theme = useTheme();
 
   return (
@@ -70,4 +70,4 @@ const AsanaMainPage = () => {
   );
 };
 
-export default AsanaMainPage;
+export default MainPage;
