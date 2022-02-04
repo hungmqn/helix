@@ -9,24 +9,24 @@ import TableOfContents from './TableOfContents';
 import Massage from './Massage';
 import Fasting from './Fasting';
 
-const AsanaMainPage = () => {
+const MainPage = () => {
   const theme = useTheme();
 
   return (
     <Card
       style={{
+        boxSizing: 'border-box',
         padding: theme.space.xxlarge,
-        minWidth: '70%',
-        maxWidth: '90%',
         marginTop: theme.space.xxlarge,
         marginBottom: theme.space.xxlarge,
+        width: '100%',
       }}
     >
       <Typography.Title
         style={{
           textAlign: 'center',
           textTransform: 'uppercase',
-          marginBottom: theme.space.large,
+          marginBottom: theme.space.xxlarge,
         }}
         fontWeight="bold"
       >
@@ -70,4 +70,4 @@ const AsanaMainPage = () => {
   );
 };
 
-export default AsanaMainPage;
+export default MainPage;

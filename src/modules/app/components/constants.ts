@@ -2,8 +2,10 @@ import { ComponentType } from 'react';
 
 import { IconName } from '../../../shared/Icon';
 
-import YogaMainPage from '../../yoga/components/MainPage';
-import CompoundEffectFormula from '../../compoundEffectFormula/components/Form';
+import { HomePage } from '../../home';
+import { AboutPage } from '../../about';
+import { BlogPage } from '../../blog';
+import { MainPage as YogaMainPage } from '../../yoga';
 
 interface RouteType {
   name: string;
@@ -22,15 +24,24 @@ export const ROUTES: RoutesType = [
     title: 'Home',
     icon: 'home',
     path: '/',
-    component: CompoundEffectFormula,
-    showInNavigator: true,
+    component: HomePage,
+    showInNavigator: false,
   },
   {
     name: 'about',
     title: 'About',
-    icon: 'quill',
+    icon: 'user',
     path: '/about',
+    component: AboutPage,
     showInNavigator: true,
+  },
+  {
+    name: 'blog',
+    title: 'Blog',
+    icon: 'quill',
+    path: '/blog',
+    component: BlogPage,
+    showInNavigator: false,
   },
   {
     name: 'yoga',
@@ -39,13 +50,5 @@ export const ROUTES: RoutesType = [
     path: '/yoga',
     component: YogaMainPage,
     showInNavigator: false,
-  },
-  {
-    name: 'compound',
-    title: 'Compound',
-    icon: 'podcast',
-    path: '/compound',
-    component: CompoundEffectFormula,
-    showInNavigator: true,
   },
 ];

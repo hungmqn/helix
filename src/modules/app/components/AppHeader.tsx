@@ -1,7 +1,16 @@
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import Typography from '../../../shared/Typography';
 
 import AppNavigator from './AppNavigator';
+
+const StyledTitle = styled.div`
+  > a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.primaryText};
+  }
+`;
 
 const AppHeader = () => {
   const theme = useTheme();
@@ -11,14 +20,18 @@ const AppHeader = () => {
         textAlign: 'center',
       }}
     >
-      <Typography.Title
-        style={{
-          marginTop: theme.space.xlarge,
-          marginBottom: theme.space.xlarge,
-        }}
-      >
-        Hung Nguyen
-      </Typography.Title>
+      <StyledTitle>
+        <Link to="/">
+          <Typography.Title
+            style={{
+              marginTop: theme.space.xlarge,
+              marginBottom: theme.space.xlarge,
+            }}
+          >
+            Hung Nguyen
+          </Typography.Title>
+        </Link>
+      </StyledTitle>
       <AppNavigator />
     </div>
   );

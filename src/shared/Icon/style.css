@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'helix-icons';
-  src: url('fonts/helix-icons.eot?xa0cko');
-  src: url('fonts/helix-icons.eot?xa0cko#iefix') format('embedded-opentype'),
-    url('fonts/helix-icons.ttf?xa0cko') format('truetype'),
-    url('fonts/helix-icons.woff?xa0cko') format('woff'),
-    url('fonts/helix-icons.svg?xa0cko#helix-icons') format('svg');
+  src: url('fonts/helix-icons.eot?ozjk2v');
+  src: url('fonts/helix-icons.eot?ozjk2v#iefix') format('embedded-opentype'),
+    url('fonts/helix-icons.ttf?ozjk2v') format('truetype'),
+    url('fonts/helix-icons.woff?ozjk2v') format('woff'),
+    url('fonts/helix-icons.svg?ozjk2v#helix-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -32,11 +32,29 @@
 .helix-icon-quill:before {
   content: '\e907';
 }
+.helix-icon-images:before {
+  content: '\e90e';
+}
 .helix-icon-camera:before {
   content: '\e90f';
 }
+.helix-icon-headphones:before {
+  content: '\e910';
+}
+.helix-icon-music:before {
+  content: '\e911';
+}
+.helix-icon-connection:before {
+  content: '\e91b';
+}
 .helix-icon-podcast:before {
   content: '\e91c';
+}
+.helix-icon-mic:before {
+  content: '\e91e';
+}
+.helix-icon-profile:before {
+  content: '\e923';
 }
 .helix-icon-file-picture:before {
   content: '\e927';
@@ -44,14 +62,50 @@
 .helix-icon-qrcode:before {
   content: '\e938';
 }
+.helix-icon-location:before {
+  content: '\e947';
+}
+.helix-icon-bell:before {
+  content: '\e951';
+}
+.helix-icon-mobile:before {
+  content: '\e959';
+}
+.helix-icon-undo:before {
+  content: '\e967';
+}
+.helix-icon-redo:before {
+  content: '\e968';
+}
+.helix-icon-forward:before {
+  content: '\e969';
+}
+.helix-icon-reply:before {
+  content: '\e96a';
+}
 .helix-icon-bubbles:before {
   content: '\e96c';
+}
+.helix-icon-user:before {
+  content: '\e971';
 }
 .helix-icon-spinner:before {
   content: '\e97b';
 }
+.helix-icon-cog:before {
+  content: '\e994';
+}
 .helix-icon-menu:before {
   content: '\e9bd';
+}
+.helix-icon-link:before {
+  content: '\e9cb';
+}
+.helix-icon-eye:before {
+  content: '\e9ce';
+}
+.helix-icon-contrast:before {
+  content: '\e9d5';
 }
 .helix-icon-heart:before {
   content: '\e9da';
@@ -89,6 +143,9 @@
 .helix-icon-arrow-left:before {
   content: '\ea38';
 }
+.helix-icon-embed:before {
+  content: '\ea80';
+}
 .helix-icon-mail:before {
   content: '\ea85';
 }
@@ -101,9 +158,21 @@
 .helix-icon-twitch:before {
   content: '\ea9f';
 }
+.helix-icon-behance:before {
+  content: '\eaa9';
+}
+.helix-icon-steam:before {
+  content: '\eaad';
+}
 .helix-icon-github:before {
   content: '\eab0';
 }
+.helix-icon-skype:before {
+  content: '\eac5';
+}
 .helix-icon-linkedin:before {
   content: '\eac9';
+}
+.helix-icon-git:before {
+  content: '\eae7';
 }
