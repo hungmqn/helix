@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'helix-icons';
-  src: url('fonts/helix-icons.eot?z2dj78');
-  src: url('fonts/helix-icons.eot?z2dj78#iefix') format('embedded-opentype'),
-    url('fonts/helix-icons.ttf?z2dj78') format('truetype'),
-    url('fonts/helix-icons.woff?z2dj78') format('woff'),
-    url('fonts/helix-icons.svg?z2dj78#helix-icons') format('svg');
+  src: url('fonts/helix-icons.eot?xa0cko');
+  src: url('fonts/helix-icons.eot?xa0cko#iefix') format('embedded-opentype'),
+    url('fonts/helix-icons.ttf?xa0cko') format('truetype'),
+    url('fonts/helix-icons.woff?xa0cko') format('woff'),
+    url('fonts/helix-icons.svg?xa0cko#helix-icons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -34,6 +34,18 @@
 }
 .helix-icon-camera:before {
   content: '\e90f';
+}
+.helix-icon-podcast:before {
+  content: '\e91c';
+}
+.helix-icon-file-picture:before {
+  content: '\e927';
+}
+.helix-icon-qrcode:before {
+  content: '\e938';
+}
+.helix-icon-bubbles:before {
+  content: '\e96c';
 }
 .helix-icon-spinner:before {
   content: '\e97b';
@@ -91,4 +103,7 @@
 }
 .helix-icon-github:before {
   content: '\eab0';
+}
+.helix-icon-linkedin:before {
+  content: '\eac9';
 }

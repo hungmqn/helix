@@ -46,11 +46,19 @@ const AsanaMainPage = () => {
         style={{ textAlign: 'center', textTransform: 'uppercase' }}
       >
         <strong>
-          Dùng cho mục đích lưu nhớ
+          Dùng cho mục đích lưu nhớ và thuận tiện tham chiếu.
           <br />
           Người mới nên thực hành dưới sự hướng dẫn của chuyên gia hoặc người có
-          kinh nghiệm
+          kinh nghiệm.
         </strong>
+      </Typography.Text>
+      <Typography.Text
+        style={{ textAlign: 'center', textTransform: 'uppercase' }}
+      >
+        This page is a note of all things to remember in my Yoga journey.
+        <br />
+        Please keep in mind that it is dangerous to do without professional
+        guidance.
       </Typography.Text>
       <TableOfContents />
       <Yoga />

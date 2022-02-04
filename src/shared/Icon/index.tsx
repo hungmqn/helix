@@ -16,7 +16,14 @@ const spinning = keyframes`
 type IconName = typeof IconList[number];
 
 interface IconProps {
-  size?: 'inherit' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
+  size?:
+    | 'inherit'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'xlarge'
+    | 'xxlarge'
+    | 'xxxlarge';
   icon: IconName;
   spin?: boolean;
   style?: any;
@@ -30,7 +37,14 @@ const IconWrapper = styled.div`
 `;
 
 const StyledIcon = styled.i<{
-  size: 'inherit' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
+  size:
+    | 'inherit'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'xlarge'
+    | 'xxlarge'
+    | 'xxxlarge';
   spin?: boolean;
 }>`
   display: inline-block;
@@ -61,6 +75,10 @@ const StyledIcon = styled.i<{
       case 'xxlarge':
         return css`
           font-size: ${theme.fontSizes.xxlarge}px;
+        `;
+      case 'xxxlarge':
+        return css`
+          font-size: ${theme.fontSizes.xxxlarge}px;
         `;
       default:
         return css`
