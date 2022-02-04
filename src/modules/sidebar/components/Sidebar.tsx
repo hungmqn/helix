@@ -1,18 +1,15 @@
 import { ReactElement } from 'react';
 
-import { useCurrentPath } from '../../../shared/hooks/useCurrentPath';
-import MenuItem from './MenuItem';
+// import MenuItem from './MenuItem';
 import Card from '../../../shared/Card';
 
 const Sidebar = (): ReactElement => {
-  const currentPath = useCurrentPath();
-
-  const handleNavigate = (path: string) => {
-    window.location.assign(path);
-  };
+  // const handleNavigate = (path: string) => {
+  //   window.location.assign(path);
+  // };
   return (
     <Card>
-      <MenuItem
+      {/* <MenuItem
         icon="home"
         text="KC Home"
         active={currentPath === '/'}
@@ -29,7 +26,7 @@ const Sidebar = (): ReactElement => {
         text="KC Mail"
         active={currentPath === '/mail'}
         onClick={() => handleNavigate('/mail')}
-      />
+      /> */}
     </Card>
   );
 };

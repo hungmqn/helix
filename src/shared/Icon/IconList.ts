@@ -20,6 +20,11 @@ const IconList = [
   'youtube',
   'twitch',
   'github',
+  'podcast',
+  'file-picture',
+  'qrcode',
+  'bubbles',
+  'linkedin',
 ] as const;
 
 export default IconList;
