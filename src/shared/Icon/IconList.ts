@@ -1,14 +1,25 @@
 const IconList = [
   'home',
   'quill',
-  'folder',
-  'user-tie',
+  'camera',
   'spinner',
   'menu',
+  'heart',
   'plus',
   'minus',
-  'cross',
+  'arrow-up-left',
+  'arrow-up',
+  'arrow-up-right',
+  'arrow-right',
+  'arrow-down-right',
+  'arrow-down',
+  'arrow-down-left',
+  'arrow-left',
   'mail',
+  'facebook',
+  'youtube',
+  'twitch',
+  'github',
 ] as const;
 
 export default IconList;
