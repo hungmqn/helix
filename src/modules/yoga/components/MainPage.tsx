@@ -23,9 +23,23 @@ const AsanaMainPage = () => {
       }}
     >
       <Typography.Title
-        style={{ textAlign: 'center', textTransform: 'uppercase' }}
+        style={{
+          textAlign: 'center',
+          textTransform: 'uppercase',
+          marginBottom: theme.space.large,
+        }}
+        fontWeight="bold"
       >
-        Yoga
+        <span
+          style={{
+            color: theme.colors.backgroundHard,
+            backgroundColor: theme.colors.white,
+            padding: `${theme.space.small}px ${theme.space.medium}px`,
+            borderRadius: theme.sizes.small,
+          }}
+        >
+          Yoga
+        </span>
       </Typography.Title>
 
       <Typography.Text

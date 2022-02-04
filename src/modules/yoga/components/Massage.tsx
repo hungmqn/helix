@@ -89,7 +89,16 @@ const Massage = () => {
           })
         }
       >
-        <Icon icon="arrow-up" style={{ cursor: 'pointer' }} />
+        <Icon
+          icon="arrow-up"
+          style={{
+            cursor: 'pointer',
+            color: theme.colors.backgroundHard,
+            backgroundColor: theme.colors.white,
+            padding: `${theme.space.small}px ${theme.space.medium}px`,
+            borderRadius: 300,
+          }}
+        />
       </div>
     </div>
   );
