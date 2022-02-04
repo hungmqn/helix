@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 import { backgroundRadial } from '../../../shared/common/gradients';
 
-const StyledMainApp = styled.div`
+const StyledAppContainer = styled.div`
   ${backgroundRadial}
   min-height: 100vh;
   display: grid;
-  place-items: center;
+  grid-template-rows: auto 1fr auto;
   color: ${({ theme }) => theme.colors.primaryText};
 `;
 
-const MainApp: FunctionComponent = ({ children }) => {
-  return <StyledMainApp>{children}</StyledMainApp>;
+const AppContainer: FunctionComponent = ({ children }) => {
+  return <StyledAppContainer>{children}</StyledAppContainer>;
 };
 
-export default MainApp;
+export default AppContainer;
