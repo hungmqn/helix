@@ -38,8 +38,8 @@ const HomePage = () => {
 
       <Typography.Text style={{ textAlign: 'center' }}>
         <strong> Hello there, welcome to my website!</strong>
-        <br />I am Hung, a software engineer. There is some useful myth here,
-        hope you find it!
+        <br />I am Hung, a software engineer. Some useful myth here, hope you
+        find it!
       </Typography.Text>
       <Typography.Text tagName="div" style={{ textAlign: 'center' }}>
         <Icon icon="heart" />
