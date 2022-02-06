@@ -7,7 +7,6 @@ import ErrorPage from './ErrorPage';
 
 const StyledAppBody = styled.div`
   box-sizing: border-box;
-  width: 100vw;
   display: grid;
   place-items: center;
 `;

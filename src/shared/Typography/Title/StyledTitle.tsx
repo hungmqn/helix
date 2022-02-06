@@ -14,19 +14,12 @@ export const HEADINGS = {
 const Heading = ({
   themeLevel,
   children,
-  id,
-  className,
   style,
 }: {
   children: string | ReactElement;
-  className?: string;
   themeLevel: 1 | 2 | 3 | 4 | 5;
 } & CommonProps): ReactElement => {
-  return React.createElement(
-    HEADINGS[themeLevel],
-    { className, style, id },
-    children
-  );
+  return React.createElement(HEADINGS[themeLevel], { style }, children);
 };
 
 const StyledTitle = styled(Heading)<{

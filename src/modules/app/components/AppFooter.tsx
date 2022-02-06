@@ -34,6 +34,9 @@ const AppFooter = () => {
         >
           <Icon icon="linkedin" size="xxxlarge" />
         </StyledIconLink>
+        <StyledIconLink href="mailto:me@hungmqn.com?subject=Hello%20there&body=Body-goes-here">
+          <Icon icon="mail" size="xxxlarge" />
+        </StyledIconLink>
       </div>
       <Typography.Title level={5}>© Hung Nguyen</Typography.Title>
     </div>
