@@ -1,39 +1,12 @@
-import { useTheme } from 'styled-components';
-
-import Card from '../../../shared/Card';
 import Typography from '../../../shared/Typography';
+import PageContainer from '../../../shared/PageContainer';
+import PageHeader from '../../../shared/PageHeader';
 
 const AboutPage = () => {
-  const theme = useTheme();
-
   return (
-    <Card
-      style={{
-        boxSizing: 'border-box',
-        padding: theme.space.xxlarge,
-        marginTop: theme.space.xxlarge,
-        marginBottom: theme.space.xxlarge,
-        width: '100%',
-      }}
-    >
-      <Typography.Title
-        style={{
-          textAlign: 'center',
-          marginBottom: theme.space.xxlarge,
-        }}
-        fontWeight="bold"
-      >
-        <span
-          style={{
-            color: theme.colors.backgroundHard,
-            backgroundColor: theme.colors.white,
-            padding: `${theme.space.small}px ${theme.space.medium}px`,
-            borderRadius: theme.sizes.small,
-          }}
-        >
-          About Me
-        </span>
-      </Typography.Title>
+    <PageContainer>
+      <PageHeader text="About Me" />
+
       <Typography.Text>
         My name is Nguyen Mai Quoc Hung (Nguyen is the last name). I am
         currently working as a software engineer at
@@ -103,7 +76,7 @@ const AboutPage = () => {
           <li>Yoga.</li>
         </ul>
       </Typography.Text>
-    </Card>
+    </PageContainer>
   );
 };
 
