@@ -96,6 +96,7 @@ const textCss = css<StyledProps>`
  * <i>
  */
 const nestedInlineStyle = css`
+  font-family: 'Noto Serif', serif;
   > strong,
   > b,
   > label {

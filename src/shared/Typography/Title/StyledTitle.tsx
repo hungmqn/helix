@@ -15,11 +15,18 @@ const Heading = ({
   themeLevel,
   children,
   style,
+  className,
+  id,
 }: {
   children: string | ReactElement;
+  className?: string;
   themeLevel: 1 | 2 | 3 | 4 | 5;
 } & CommonProps): ReactElement => {
-  return React.createElement(HEADINGS[themeLevel], { style }, children);
+  return React.createElement(
+    HEADINGS[themeLevel],
+    { style, className, id },
+    children
+  );
 };
 
 const StyledTitle = styled(Heading)<{
@@ -27,6 +34,7 @@ const StyledTitle = styled(Heading)<{
   themeIntent: 'main' | 'subdued';
   themeLevel: 1 | 2 | 3 | 4 | 5;
 }>`
+  font-family: 'Noto Serif Display', serif;
   margin: 0;
   padding: 0;
 
