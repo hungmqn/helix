@@ -1,6 +1,3 @@
-import { useTheme } from 'styled-components';
-
-import Card from '../../../shared/Card';
 import Typography from '../../../shared/Typography';
 import Yoga from './Yoga';
 import Asana from './Asana';
@@ -8,40 +5,13 @@ import Kaoshikii from './Kaoshikii';
 import TableOfContents from './TableOfContents';
 import Massage from './Massage';
 import Fasting from './Fasting';
+import PageContainer from '../../../shared/PageContainer';
+import PageHeader from '../../../shared/PageHeader';
 
 const MainPage = () => {
-  const theme = useTheme();
-
   return (
-    <Card
-      style={{
-        boxSizing: 'border-box',
-        padding: theme.space.xxlarge,
-        marginTop: theme.space.xxlarge,
-        marginBottom: theme.space.xxlarge,
-        width: '100%',
-      }}
-    >
-      <Typography.Title
-        style={{
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          marginBottom: theme.space.xxlarge,
-        }}
-        fontWeight="bold"
-      >
-        <span
-          style={{
-            color: theme.colors.backgroundHard,
-            backgroundColor: theme.colors.white,
-            padding: `${theme.space.small}px ${theme.space.medium}px`,
-            borderRadius: theme.sizes.small,
-          }}
-        >
-          Yoga
-        </span>
-      </Typography.Title>
-
+    <PageContainer>
+      <PageHeader text="Yoga" />
       <Typography.Text
         style={{ textAlign: 'center', textTransform: 'uppercase' }}
       >
@@ -66,7 +36,7 @@ const MainPage = () => {
       <Kaoshikii />
       <Massage />
       <Fasting />
-    </Card>
+    </PageContainer>
   );
 };
 

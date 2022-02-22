@@ -5,6 +5,7 @@ import { IconName } from '../../../shared/Icon';
 import { HomePage } from '../../home';
 import { AboutPage } from '../../about';
 import { BlogPage } from '../../blog';
+import { Gallery } from '../../gallery';
 import { MainPage as YogaMainPage } from '../../yoga';
 
 interface RouteType {
@@ -41,6 +42,14 @@ export const ROUTES: RoutesType = [
     icon: 'quill',
     path: '/blog',
     component: BlogPage,
+    showInNavigator: false,
+  },
+  {
+    name: 'gallery',
+    title: 'Gallery',
+    icon: 'images',
+    path: '/gallery',
+    component: Gallery,
     showInNavigator: false,
   },
   {
