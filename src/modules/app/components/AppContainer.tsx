@@ -1,6 +1,6 @@
-import { FunctionComponent } from 'react';
+import { ElementType, FunctionComponent } from 'react';
 import styled from 'styled-components';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Route, Routes } from 'react-router-dom';
 
 import { backgroundRadial } from '../../../shared/common/gradients';
 
@@ -17,15 +17,22 @@ const StyledAppContainer = styled.div`
   color: ${({ theme }) => theme.colors.primaryText};
 `;
 
-const isRenderedWithoutHeaderAndFooter = (pathname: string) =>
-  ROUTES.find((route) => pathname === route.path)?.renderWithoutHeaderAndFooter;
+const getCurrentRouteConfig = (pathname: string) =>
+  ROUTES.find((route) => pathname === route.path);
 
 const AppContainer: FunctionComponent = () => {
   const currentRoute = useLocation();
+  const currentRouteConfig = getCurrentRouteConfig(currentRoute.pathname);
+  if (currentRouteConfig && currentRouteConfig.renderWithoutHeaderAndFooter) {
+    const Component = currentRouteConfig.component as ElementType;
+    return (
+      <Routes>
+        <Route path={currentRouteConfig.path} element={<Component />} />
+      </Routes>
+    );
+  }
 
-  return isRenderedWithoutHeaderAndFooter(currentRoute.pathname) ? (
-    <AppBody />
-  ) : (
+  return (
     <StyledAppContainer>
       <AppHeader />
       <AppBody />
