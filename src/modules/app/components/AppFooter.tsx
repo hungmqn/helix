@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import styled, { useTheme } from 'styled-components';
+
 import Icon from '../../../shared/Icon';
 import Typography from '../../../shared/Typography';
 
@@ -11,6 +13,8 @@ const StyledIconLink = styled.a`
 
 const AppFooter = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -38,7 +42,9 @@ const AppFooter = () => {
           <Icon icon="mail" size="xxxlarge" />
         </StyledIconLink>
       </div>
-      <Typography.Title level={5}>© Hung Nguyen</Typography.Title>
+      <div style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+        <Typography.Title level={5}>© Hung Nguyen</Typography.Title>
+      </div>
     </div>
   );
 };

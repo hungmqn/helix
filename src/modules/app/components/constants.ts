@@ -51,7 +51,7 @@ export const ROUTES: RoutesType = [
     icon: 'images',
     path: '/gallery',
     component: Gallery,
-    showInNavigator: true,
+    showInNavigator: false,
     renderWithoutHeaderAndFooter: true,
   },
   {
