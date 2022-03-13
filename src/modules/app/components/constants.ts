@@ -15,6 +15,7 @@ interface RouteType {
   path: string;
   component?: ComponentType;
   showInNavigator?: boolean;
+  renderWithoutHeaderAndFooter?: boolean;
 }
 
 interface RoutesType extends Array<RouteType> {}
@@ -50,7 +51,8 @@ export const ROUTES: RoutesType = [
     icon: 'images',
     path: '/gallery',
     component: Gallery,
-    showInNavigator: false,
+    showInNavigator: true,
+    renderWithoutHeaderAndFooter: true,
   },
   {
     name: 'yoga',
