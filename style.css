@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+  /* background: rgb(187, 38, 73);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(187, 38, 73, 1) 0%,
+    rgba(223, 97, 127, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(187, 38, 73, 1) 0%,
+    rgba(223, 97, 127, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(187, 38, 73, 1) 0%,
+    rgba(223, 97, 127, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bb2649",endColorstr="#df617f",GradientType=1); */
+  background: beige;
+  font-family: 'DM Serif Display';
+}
+
+h1 {
+  color: #bb2649;
+}
+
+h2 {
+  color: #d42b53;
+}
+
+h3 {
+  color: #d73b60;
+}
+
+h4 {
+  color: #db4d6e;
+}
+
+h5 {
+  color: #df617f;
+}
