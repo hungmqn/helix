@@ -14,6 +14,7 @@ const StyledTitle = styled.div`
 
 const AppHeader = () => {
   const theme = useTheme();
+
   return (
     <div
       style={{

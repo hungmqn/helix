@@ -1,16 +1,25 @@
-import { useTheme } from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
-import PageContainer from '../../../shared/PageContainer';
+import { backgroundRadial } from '../../../shared/common/gradients';
+
 import PageHeader from '../../../shared/PageHeader';
+import AppFooter from '../../app/components/AppFooter';
+
+const StyledPageContainer = styled.div`
+  ${backgroundRadial}
+  min-height: 100vh;
+  color: ${({ theme }) => theme.colors.linkText};
+`;
 
 const Gallery = () => {
   const theme = useTheme();
 
   return (
-    <PageContainer>
+    <StyledPageContainer>
       <PageHeader text="Gallery" />
       <div style={{ marginBottom: theme.space.large }}>Content Here</div>
-    </PageContainer>
+      <AppFooter />
+    </StyledPageContainer>
   );
 };
 
